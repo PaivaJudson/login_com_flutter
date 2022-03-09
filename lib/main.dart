@@ -71,6 +71,20 @@ class _WidgetLoginState extends State<WidgetLogin> {
       ),
     );
     
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Container(
+          color: Colors.white,
+          padding: const EdgeInsets.all(40),
+          child: Column(
+            children: [
+              SizedBox(height: 150.0,
+              child: Image.asset("imagens/login.png"),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
