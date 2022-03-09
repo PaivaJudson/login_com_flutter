@@ -79,8 +79,12 @@ class _WidgetLoginState extends State<WidgetLogin> {
           child: Column(
             children: [
               SizedBox(height: 150.0,
-              child: Image.asset("imagens/login.png"),
-              )
+              child: Image.asset("imagens/login.png",
+              fit: BoxFit.contain),
+              ),
+              SizedBox(height: 40.0), emailField,
+              SizedBox(height: 20.0), passwordField,
+              SizedBox(height: 30.0), buttonLogin,
             ],
           ),
         ),
