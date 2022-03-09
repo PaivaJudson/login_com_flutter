@@ -36,10 +36,40 @@ class _WidgetLoginState extends State<WidgetLogin> {
       obscureText: false,
       style: style,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
-      ),
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Email",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),),
     );
     
+    final passwordField = TextField(
+      obscureText: true,
+      style: style,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Password",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),),
+    );
+
+    final buttonLogin = ButtonTheme(
+      minWidth: MediaQuery.of(context).size.width,
+      padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0), 
+      // ignore: deprecated_member_use
+      child: RaisedButton(
+        color: Color(0xff01A0C7),
+        child: Text(
+          "Login",
+          textAlign: TextAlign.center,
+          style: style.copyWith(
+            color: Colors.white,
+            fontWeight: FontWeight.bold),),
+        onPressed: (){
+
+        },
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0)
+        ),    
+      ),
+    );
     
     return Container();
   }
